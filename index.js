@@ -24,8 +24,8 @@ const uploads = multer({
 
 
 //middelwares
-app.set("view engine", "hbs"); //tell express that we are going using handlebar
-app.use("/assets", express.static("public")); //set path for access static assets
+app.set("view engine", "hbs"); //tell express that we are going to use handlebar
+app.use("/assets", express.static("public")); //set path for access static files like css, js etc.
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
