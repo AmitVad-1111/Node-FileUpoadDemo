@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload | Node js</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <main>
+        <h1 align="center">File Upload Demo</h1>
+        <div class="control-area">
+            {{#if message}}
+                <div class="msg success-msg">
+                    <span>{{message}}</span>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            {{/if}}
+
+            {{#if error}}
+                <div class="msg error-msg">
+                    <span>{{error}}</span>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            {{/if}}
+
+            <form method="post" enctype="multipart/form-data" name="file-upload-form" id="file-upload-form">
+                <div class="button-area">
+                    <a href="javascript:void(0)" class="control-button open-file">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <span>Open CSV File</span>
+                    </a>
+                    <input type="file" name="openFileDialog" id="openFileDialog"/>
+                    <a href="javascript:void(0)" class="control-button add-new">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <button class="control-button upload-button" type="submit">
+                        <i class="fa-solid fa-upload"></i>
+                        <span>Upload File</span>
+                    </button>
+                </div>
+                <div class="all-inputs">
+                    <div class="form-controls">
+                        <input type="file" name="csvfilesurl" multiple class="input-controls">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div id="fileData"></div>
+    </main>
+
+    <script src="assets/js/fronted.js"></script>
+</body>
+
+</html>
