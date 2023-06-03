@@ -29,7 +29,7 @@ app.use("/assets", express.static("public")); //set path for access static files
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-//only accest csv file
+//put validation to upload csv files only
 function fileFilterFun(req, file, cb) {
     if (file.mimetype === 'text/csv') {
         cb(null, true)
