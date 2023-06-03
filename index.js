@@ -3,7 +3,6 @@ const multer = require("multer");
 const tools = require("cli-csv-tools");
 const bodyParser = require("body-parser");
 const app = new express();
-const maxCount = 2;
 
 //define port
 const PORT = process.env.PORT || 3000;
